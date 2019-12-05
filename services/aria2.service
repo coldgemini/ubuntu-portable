@@ -1,0 +1,16 @@
+[Unit]
+Description=aria service
+Requires=network.target
+After=dhcpcd.service
+
+[Service]
+Type=forking
+User=xiang
+ExecStart=/usr/bin/aria2c --conf-path=/home/xiang/.config/aria2/aria2.conf --daemon
+ExecReload=/usr/bin/kill -HUP $MAINPID
+Restart=always
+TimeoutSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
