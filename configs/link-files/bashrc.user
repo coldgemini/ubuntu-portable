@@ -1,4 +1,5 @@
 alias rc='. $HOME/.bashrc.user'
+alias vrc='vim $HOME/.bashrc.user'
 export EDITOR=vim
 alias sudo='sudo '
 alias ll='ls -alr --color=auto'
@@ -82,9 +83,16 @@ alias gb='git branch -a'
 alias gl='git log'
 alias gd='git diff'
 
-alias vpn='expressvpn'
-alias vpnon='expressvpn connect'
-alias vpnoff='expressvpn disconnect'
+alias sysdenable='sudo systemctl enable'
+alias sysdstart='sudo systemctl start'
+alias sysdstop='sudo systemctl stop'
+alias sysdrestart='sudo systemctl restart'
+alias sysdstatus='sudo systemctl status'
+alias sysdreload='sudo systemctl daemon-reload'
+
+# alias vpn='expressvpn'
+# alias vpnon='expressvpn connect'
+# alias vpnoff='expressvpn disconnect'
 source /home/xiang/.bashrc.functions
 
 
