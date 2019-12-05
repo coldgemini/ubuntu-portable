@@ -1,0 +1,11 @@
+docker run -u xiang -w ~ -it ubuntu:16.04.ds1
+docker run -v /home/xiang:/home/xiang -u xiang -w ~ -it ubuntu:16.04.ds1
+docker ps -a
+docker commit -a xiang -m 'message' id ubuntu:16.04.ds1
+
+sudo docker build -t xenial_sshd .
+docker run -d -P --name comtainer_name image_name
+docker port container_name 22
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)

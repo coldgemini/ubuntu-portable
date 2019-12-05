@@ -1,0 +1,1 @@
+cat raw_scalar_npz_list | xargs -n 1 basename

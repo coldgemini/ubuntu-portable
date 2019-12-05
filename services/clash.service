@@ -1,0 +1,25 @@
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+
+# This unit gets pulled automatically into multi-user.target by
+# systemd-rc-local-generator if /etc/rc.local is executable.
+[Unit]
+Description=clash
+#ConditionFileIsExecutable=/usr/local/bin/ssr
+After=network.target
+
+[Service]
+#Type=simple
+Type=simple
+#ExecStart=/usr/local/bin/ssr start
+ExecStart=/home/xiang/clash/clash-linux-amd64-v0.16.0 -d /home/xiang/clash
+Restart=always
+TimeoutSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

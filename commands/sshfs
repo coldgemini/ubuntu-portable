@@ -1,0 +1,7 @@
+sshfs -o Ciphers=arcfour -o Compression=no volcano:~/Data/ct_aorta ct_aorta
+
+# unmount
+fusermount -u Proj
+
+sshfs user@ssh:/tmp /tmp/ssh -F /tmp/empty \
+        -o NumberOfPasswordPrompts=1,ServerAliveInterval=1,ServerAliveCountMax=1

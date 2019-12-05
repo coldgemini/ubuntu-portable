@@ -1,0 +1,71 @@
+sudo apt install wireless-tools net-tools
+sudo apt install gdebi-core python vim-gtk sox libsox-fmt-all
+sudo apt install rxvt-unicode-256color x11-xserver-utils i3
+
+vim ~/.profile
+# 添加下面内容
+export LANG="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
+sudo locale-gen zh_CN.UTF-8
+
+sudo apt-get install zh-autoconvert
+sudo apt-get install zhcon
+sudo apt install x11-xserver-utils
+
+vi /var/lib/locales/supported.d/local  加入
+zh_CN.GBK GBK
+zh_CN.GB2312 GB2312
+sudo locale-gen
+修改用户目录下的.profile或.bashrc文件，增加以下内容：
+修改/etc/environment，增加以下内容
+LANGUAGE="zh_CN:zh:en_US:en"
+LANG=zh_CN.GBK 
+sudo apt-get install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
+sudo apt-get install language-pack-zh-hans
+sudo apt-get install language-pack-[cod] language-pack-gnome-[cod] language-pack-[cod]-base language-pack-gnome-[cod]-base
+sudo apt-get install fonts-font-awesome
+
+gnome-control-center
+gnome-language-selector
+sudo apt install dbus-x11
+im-config
+fcitx-table-wbpy
+fcitx-configtool
+
+wpa_passphrase ssid passwd
+iwlist
+ifconfig
+sudo ifup wlan0
+sudo iwconfig wlan0
+sudo iwlist wlan0 scan
+sudo ifconfig wlan0 up
+wpa_supplicant -i wlan0 -c wpa_supplicant.conf
+sudo wpa_supplicant -B -iwlan0 -c wpa_supplicant.conf -Dwext
+sudo dhclient wlan0
+sudo ifconfig
+sudo ifconfig enx00e04c1b9b53 down
+ip addr
+
+sudo apt  install alsa-utils pulseaudio
+cat /proc/asound/modules
+alsamixer -c 1
+
+sudo apt-get install ntpdate
+dpkg-reconfigure tzdata
+sudo dpkg-reconfigure tzdat
+sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+sudo ntpdate cn.pool.ntp.org
+hwclock --systohc
+
+xrdb ~/.Xresources
+
+git clone https://github.com/tomasr/molokai.git
+
+dpkg-reconfigure console-setup
+
+<<<<<<< HEAD:configs/tmp/setup
+git config --global user.email "coldgemini@foxmail.com"
+git config --global user.name "xiang"
+=======
+git config --global http.proxy http://mydomain\\myusername:mypassword@myproxyserver:8080
+>>>>>>> 7232ed9cd4f96f16dc771d30b5ffeb063cf79980:configs/setup

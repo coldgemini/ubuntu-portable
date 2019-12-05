@@ -1,0 +1,21 @@
+awk 'BEGIN{printf "Sr No\tName\tSub\tMarks\n"} {print}' marks.txt
+awk -f print.awk marks.txt
+
+awk -v name=Jerry 'BEGIN{printf "Name = %s\n", name}'
+
+awk '{print $3 "\t" $4}' marks.txt
+awk '/a/ {print $0}' marks.txt
+awk '/a/' marks.txt
+awk '/a/ {print $3 "\t" $4}' marks.txt
+awk '/a/{++cnt} END {print "Count = ", cnt}' marks.txt
+awk 'length($0) > 18' marks.txt
+
+awk 'BEGIN {num = 10; if (num % 2 == 0) printf "%d is even number.\n", num }'
+awk 'BEGIN {
+   num = 11; if (num % 2 == 0) printf "%d is even number.\n", num; 
+      else printf "%d is odd number.\n", num 
+}'
+
+awk 'BEGIN { for (i = 1; i <= 5; ++i) print i }'
+awk 'BEGIN {i = 1; while (i < 6) { print i; ++i } }'
+awk 'BEGIN {i = 1; do { print i; ++i } while (i < 6) }'

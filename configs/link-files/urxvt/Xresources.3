@@ -1,0 +1,168 @@
+!man x; man xterm: to check class resource
+! name.Class.resource: value[int|bool|string]
+!!!!!!!!!!!!!!!!!!!!!!!
+!!! RELOAD            !
+!!! xrdb ~/.Xresources!
+!!!!!!!!!!!!!!!!!!!!!!!
+
+
+! Preferences
+! xterm-256color ?: bad for yellow
+xterm*termName: xterm-256color
+! WxH+x+y
+!xterm*vt100.geometry: 110x51+0+0
+xterm*geometry: 132x51+0+0
+!xterm*c132: true
+xterm.borderLess: true
+! Legacy: Remove black border
+!xterm*borderWidth: 0
+xterm*internalborder: 0
+! xterm.cursorBlink: false
+xterm.toolBar: false
+! line spacing, row pitch: 0.9~1.5
+xterm*scaleHeight: 1.01
+
+
+xterm*iconName: xterm
+xterm*iconBorderColor: blue
+xterm*iconBorderWidth: 2
+xterm*iconFont: -wenquanyi-wenquanyi bitmap song-medium-r-normal--16-160-75-75-p-80-iso10646-1
+
+
+! use audible bell other than flashing
+Xterm*visualBell: false
+! correct for Alt key
+xterm*metaSendsEscape: true
+! Scrolling
+xterm*saveLines: 100000
+xterm*scrollBar: false
+xterm*rightScrollBar: false
+xterm*jumpScroll: true
+xterm*scrollKey: false
+xterm*scrollTtyOutput: true
+xscreensaver.Dialog.headingFont: -*-fixed-bold-r-*-*-*-100-*-*-*-*-iso8859-1
+!xterm*autoWrap: true
+xterm*curses: true
+
+
+!Translations
+XTerm*VT100.Translations: #override \
+        Shift Ctrl <KeyPress> V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+        <BtnUp>: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+        Shift Ctrl <KeyPress> P: print-everything(noAttrs) \n
+! print color and bold/underline attributes
+xterm*printAttributes: 2
+xterm*printerCommand: cat > ~/tmp/xtermdump
+xterm*on2Clicks: word
+xterm*on3Clicks: line
+xterm*on4Clicks: none
+! define double-click selected words
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*cutNewline: false
+xterm*eightBitInput: false
+
+
+! {{{ language, font setting
+! Xterm*local: true
+! CJK Fonts
+xterm*locale: zh_CN.UTF-8
+! fc-list: search font family
+!xterm*faceName: Courier New:style=Regular,Normal,Standard:antialias=false:size=12
+xterm*faceName: DejaVu Sans Mono:style=Book,Standard:antialias=true:size=12
+xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono:style=Regular:antialias=false:size=12
+xterm*utf8: true
+xterm*utf8Title: true
+! xterm.title:
+xterm*font: DejaVu Sans Mono:style=Book,Standard:antialias=true:size=12
+xterm*cjkWidth: true
+!xterm*mkWidth: true
+Xterm*XimFont: -wenquanyi-wenquanyi bitmap song-medium-r-normal--16-160-75-75-p-80-iso10646-1
+xterm*faceSize:  12
+xterm*faceSize1: 12
+xterm*faceSize2: 12
+xterm*faceSize3: 12
+xterm*faceSize4: 12
+xterm*faceSize5: 12
+xterm*faceSize6: 12
+! }}} language, font setting
+
+
+! {{{ cursor setting
+Xterm*cursorColor: #00FF00
+Xterm*cursorBlink: true
+Xterm*cursorOffTime: 300
+Xterm*cursorOnTime: 600
+Xterm*cursorUnderLine: true
+! }}} cursor setting
+
+
+! {{{ triple clicking to select a line but no NewLine
+Xterm*cutToBeginningOfLine: true
+Xterm*cutNewline: false
+! }}} triple clicking
+
+
+! {{{ color setting
+!! for escape char-sequence
+xterm*dynamicColors: true
+!xterm*colorAttrMode: false
+xterm*colorBDMode: true
+Xterm*colorBD: yellow
+Xterm*colorULMode: true
+Xterm*colorUL: white
+!Xterm*highlightColor: #C0C0C0
+! http://www.xcolors.net [tango]
+Xterm*foreground: rgb:E0/E0/E0
+Xterm*background: rgb:2E/34/36
+! FG Code: 30, Black
+Xterm*color0:  #3D3D3D
+! FG Code: 31, Red
+Xterm*color1:  #CC0000
+! FG Code: 32, Green
+Xterm*color2:  #4E9A06
+! FG Code: 33, Yellow
+Xterm*color3:  #C4A000
+! FG Code: Blue, 34
+Xterm*color4:  #3465A4
+! FG Code: 35, Magenta
+! Xterm*color5:  #75507B
+Xterm*color5:  #800080
+! FG Code: 36, Cyan
+! Xterm*color6:  #0B939B
+! Xterm*color6:  #06989A
+Xterm*color6:  ##008080
+! FG Code: 37, White
+! Xterm*color7:  #D3D7CF
+Xterm*color7:  #D2D2D2
+!! BG color Bold or Bright
+! BG Code: 40, Black
+Xterm*color8:  #555753
+! BG Code: 41, Red
+! Xterm*color9:  #EF2929
+Xterm*color9:  #FF5555
+! BG Code: 42, Green
+! Xterm*color10: #8AE234
+Xterm*color10: #90ee90
+! BG Code: 43, Yellow
+! Xterm*color11: #FCE94F
+Xterm*color11: #EAEA44
+!xterm*color11: #E0E000
+! BG Code: 44, Blue
+! Xterm*color12: #729FCF
+Xterm*color12: #006fb8
+! BG Code: 45, Magenta
+Xterm*color13: #AD7FA8
+! BG Code: 46, Cyan
+! Xterm*color14: #00F5E9
+! Xterm*color14: #34E2E2
+Xterm*color14: #00AAAA
+! BG Code: 47, White
+! Xterm*color15: #EEEEEC
+Xterm*color15: #E5E5E5
+! }}} color setting
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! emacs.foreground: rgb:FF/FF/FF
+! emacs.background: rgb:2E/34/36
+Emacs.useXIM: false

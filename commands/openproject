@@ -1,0 +1,10 @@
+init passwd admin admin
+
+docker run -it -p 8088:80 -e SECRET_KEY_BASE=secret openproject/community:8
+docker run -d -p 8088:80 -e SECRET_KEY_BASE=secret openproject/community:8
+
+docker run -d -p 8088:80 --name openproject -e SECRET_KEY_BASE=secret -v /var/lib/openproject/pgdata:/var/openproject/pgdata -v /var/lib/openproject/static:/var/openproject/assets openproject/community:8
+
+  docker stop openproject
+  docker start openproject
+  docker stop openproject && docker rm openproject

@@ -1,0 +1,2 @@
+diff <(find folder1/ -type f -exec md5sum {} \; | cut -f 1 -d ' ' | sort) \
+    <(find folder2/ -type f -exec md5sum {} \; | cut -f 1 -d ' ' | sort)

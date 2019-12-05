@@ -1,0 +1,7 @@
+I was able to solve the two problems by
+
+optimizing the compiler flags. Added the following to bazel-bin --config=opt --copt=-msse4.1 --copt=-msse4.2 --copt=-mavx --copt=-mavx2 --copt=-mfma
+
+Not importing tf.contrib for every inference. In the inception_client sample provided by google, these lines re-import tf.contrib for every forward pass.
+
+

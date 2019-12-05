@@ -1,0 +1,42 @@
+git lfs install
+git lfs track "*.iso"
+git init --bare
+
+git config -l
+git config --global http.proxy socks5://127.0.0.1:1080
+git config --global https.proxy socks5://127.0.0.1:1080
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+git config --global core.gitproxy "git-proxy"
+git config --global socks.proxy "127.0.0.1:1080"
+
+git config --global http.proxy socks5h://127.0.0.1:1080
+git config --global https.proxy socks5h://127.0.0.1:1080
+
+
+git reset HEAD -- *pyc
+
+
+git clone git@120.27.149.24:zhouxiangyong/coronary_artery.git
+cd coronary_artery
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+git tag -a <rtag> <SHA1 value> -m "message".
+
+git submodule add url path
+
+
+git remote add origin git@github.com:coldgemini/dl_base_tf2.git
+git remote remove origin
+
+git push -u origin master
+git checkout -b branchxyz origin/branchxyz 
+git branch --set-upstream-to=origin/<branch> dev
+git pull
+git pull origin master
+
+git remote set-url origin git@gitserver.com:user/repo_name.git

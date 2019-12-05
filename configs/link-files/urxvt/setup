@@ -1,0 +1,3 @@
+xrdb .Xresources
+git clone https://github.com/daedreth/URXVTConfig.git
+git clone https://github.com/muennich/urxvt-perls.git

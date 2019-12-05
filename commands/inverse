@@ -1,0 +1,2 @@
+shopt -s extglob
+rm !(textfile.txt|backup.tar.gz|script.php|database.sql|info.txt)

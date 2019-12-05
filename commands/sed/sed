@@ -1,0 +1,4 @@
+sed -i 's/xxx/ooo/g' files
+sed 's/xxx/ooo/g' files > output
+
+sed 's:/usr/local/bin:/common/bin:' <old >new

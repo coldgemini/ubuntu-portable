@@ -1,0 +1,23 @@
+convert howtogeek.png howtogeek.jpg
+
+convert howtogeek.png -quality 95 howtogeek.jpg
+
+convert example.png -resize 200x100 example.png
+
+convert example.png -resize 200x100! example.png
+
+convert example.png -resize 200 example.png
+
+convert example.png -resize x100 example.png
+
+convert howtogeek.jpg -rotate 90 howtogeek-rotated.jpg
+
+convert howtogeek.jpg -charcoal 2 howtogeek-charcoal.jpg
+
+convert howtogeek.jpg -implode 1 howtogeek-imploded.jpg
+
+convert howtogeek.png -resize 400x400 -rotate 180 -charcoal 4 -quality 95 howtogeek.jpg
+
+for file in *.png; do convert $file -rotate 90 rotated-$file; done
+
+

@@ -1,0 +1,3 @@
+shopt -s extglob
+rm -v !("filename")
+rm -v !("filename1"|"filename2")

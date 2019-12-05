@@ -1,0 +1,23 @@
+$ adb usb
+restarting in USB mode
+$ adb devices
+List of devices attached
+ZX1D63HX9R  device
+
+$ adb tcpip 5556
+restarting in TCP mode port: 5556
+
+adb shell netcfg
+
+$ adb connect 192.168.0.102:5556
+already connected to 192.168.0.102:5556
+$ adb devices
+List of devices attached
+ZX1D63HX9R  device
+192.168.0.102:5556  device
+
+$ adb connect 192.168.0.102:5556
+connected to 192.168.0.102:5556
+$ adb devices
+List of devices attached
+192.168.0.102:5556  device

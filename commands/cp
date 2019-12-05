@@ -1,0 +1,2 @@
+shopt -s extglob
+cp -r !(Filename1 | FoldernameX | Filename2) Dest/

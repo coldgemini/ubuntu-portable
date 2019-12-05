@@ -1,0 +1,11 @@
+find -iname '*.txt' -execdir rm {} \;
+find dir -name "*.png" -type f -exec rm {} \;
+find . -maxdepth 1 -type d -exec sh -c "echo '{}'; ls -1 '{}' | wc -l" \; | xargs -n 2 | awk '{print $1" "$2}'
+
+list subdirectory relative paths
+find /path -type f
+
+find . -type f -not -name .htaccess -printf "\n%p\n" -exec cat {} \;
+find . -type f -not -name .htaccess -exec cats {} \+
+
+find . -type f -print -exec cat {} \;

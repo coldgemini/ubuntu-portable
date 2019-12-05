@@ -1,0 +1,4 @@
+dunst install
+sudo apt-get install dbus-user-session
+cd /usr/share/dbus-1/services
+/* sudo mv org.freedesktop.Notifications.service org.freedesktop.Notifications.service.disabled */

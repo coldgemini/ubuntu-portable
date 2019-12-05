@@ -1,0 +1,4 @@
+ssh -N -L 9000:SERVER_ADDRESS:9000 USER@SERVER_ADDRESS
+ssh -N -f -L 8888:localhost:9000 zhouxiangyong@volcano
+ssh -N -f -L 8888:localhost:9000 zhouxiangyong@s108 -p 10822
+jupyter notebook --port=9000 --no-browser &

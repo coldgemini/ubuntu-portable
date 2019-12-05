@@ -1,0 +1,2 @@
+pip install jupyter numpy tensorflow-gpu torch matplotlib scipy scikit-learn scikit-image
+pip install pynrrd pyvtk SimpleITK pytest pillow imutils sympy vtk

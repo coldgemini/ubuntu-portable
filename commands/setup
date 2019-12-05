@@ -1,0 +1,13 @@
+echo 'blacklist snd_hdmi_lpe_audio' >> /etc/modprobe.d/blacklist.conf
+echo 'blacklist snd_soc_sst_bytcr_rt5640' >> /etc/modprobe.d/blacklist.conf
+echo 'blacklist snd_pcm' >> /etc/modprobe.d/blacklist.conf
+
+sudo apt install i3 i3-wm i3blocks i3status fonts-font-awesome
+sudo apt install vim-gtk
+
+sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+
+echo "message" | mail -s "title" -A attachment coldgemini@foxmail.com

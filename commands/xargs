@@ -1,0 +1,14 @@
+xargs -a list.txt cp -t new_folder
+ls /source/path/*pattern* | xargs -I{} cp -u {} /destination/path
+
+$ cat x.list
+foo
+bar
+blargh
+$ cat x.list | tr '\n' '\0' | xargs -0 -L1 -I '$' echo 'myString$Blah'
+myStringfooBlah
+myStringbarBlah
+myStringblarghBlah
+
+echo 'hoho' | xargs   -I '$' echo 'haha$haha'
+echo 'hoho' | xargs -n 1  -I '$' echo 'haha$haha'

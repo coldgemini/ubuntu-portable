@@ -1,0 +1,16 @@
+adduser username
+
+Adding user `username' ...
+Adding new group `username' (1001) ...
+Adding new user `username' (1001) with group `username' ...
+Creating home directory `/home/username' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+
+usermod -aG sudo username
+
+su - username
+sudo whoami
+

@@ -1,0 +1,11 @@
+ rsync -a --include '*/' --exclude '*' /path/to/source/* /path/to/dest # copy directory
+
+rsync -avz -e "ssh -p $portNumber" user@remoteip:/path/to/files/ /local/path/
+
+#!/usr/bin/env bash
+
+rsync -avuhP -e "ssh -p 10822" * zhouxiangyong@s108:~/Proj/coronary
+
+shopt -s dotglob
+rsync -avn --progress sourcefolder /destinationfolder --exclude thefoldertoexclude --exclude anotherfoldertoexclude 
+rsync -av --progress sourcefolder /destinationfolder --exclude thefoldertoexclude --exclude anotherfoldertoexclude

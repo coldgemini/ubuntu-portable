@@ -1,0 +1,13 @@
+In [7]: I = cv2.imread('./data/SIDBA/Lenna.bmp')
+
+In [8]: cv2.startWindowThread()
+Out[8]: 1
+
+In [9]: cv2.namedWindow('window')
+
+In [10]: cv2.imshow('window', I)
+
+In [11]: cv2.waitKey(0)
+Out[11]: 10
+
+In [12]: cv2.destroyAllWindows()

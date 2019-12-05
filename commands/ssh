@@ -1,0 +1,5 @@
+ssh zhouxiangyong@192.168.0.108 -Y
+Enter ~.
+
+# port farwording tunnel
+ssh -nNT -L 9000:imgur.com:80 user@example.com
