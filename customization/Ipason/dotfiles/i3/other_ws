@@ -1,0 +1,7 @@
+0~9: frequenctly used apps
+10~99: numbered terminals
+100~199: T_named # named terminal jobs
+200~299: S_named # named server jobs
+300~399: M_named # named mount jobs
+888: pycharm
+999: others

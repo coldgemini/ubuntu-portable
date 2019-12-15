@@ -1,1 +1,0 @@
-/home/xiang/Src/VimTodo/ftplugin/todo.vim

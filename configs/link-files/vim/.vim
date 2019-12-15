@@ -1,1 +1,0 @@
-/home/xiang/ubuntu-settings/configs/link-files/vim
