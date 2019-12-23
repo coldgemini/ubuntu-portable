@@ -355,7 +355,7 @@ bindsym $mod+m bar mode toggle
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bar {
  	status_command i3status
- 		tray_output primary
+ 		# tray_output primary
  		font xft:Noto Sans 12
  		strip_workspace_numbers yes
 
@@ -380,6 +380,7 @@ bar {
 #user setting
 exec_always --no-startup-id nm-applet --sm-disable
 exec --no-startup-id volumeicon
+exec --no-startup-id fcitx
 # exec_always --no-startup-id blueman-applet
 #exec --no-startup-id mpd
 #exec_always --no-startup-id classicmenu-indicator
