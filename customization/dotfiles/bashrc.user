@@ -1,0 +1,128 @@
+alias rc='. $HOME/.bashrc.user'
+alias vrc='vim $HOME/.bashrc.user'
+export EDITOR=vim
+alias sudo='sudo '
+alias ll='ls -alr --color=auto'
+alias la='ls -ar --color=auto'
+alias ls='ls -tr --color=auto'
+# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+# export PATH=/usr/local/cuda/bin:$PATH
+export PATH=$HOME/Apps/protoc/bin:$PATH
+
+export WORKON_HOME=$HOME/Envs
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+#source /home/$USER/.local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
+
+# export CAFFE_ROOT=/home/$USER/Workbench/caffe
+# alias matlab='/home/$USER/MATLAB/R2017b/bin/matlab'
+# alias matlabnojvm='/home/$USER/MATLAB/R2017b/bin/matlab -nojvm -nosplash'
+# alias matlabnodisplay='/home/$USER/MATLAB/R2017b/bin/matlab -nodisplay -nosplash'
+# alias matlabwin='/home/$USER/MATLAB/R2017b/bin/matlab'
+# alias connectnfs='sudo mount -t nfs -o rw,soft,timeo=30,retry=3 192.168.1.104:/var/storage/nfsroot ~/mnt/nfs'
+export PYTHONPATH=$HOME/Dev/models/research:$HOME/Dev/models/research/slim
+export PYTHONPATH=$HOME/Dev/models/research/object_detection:$PYTHONPATH
+export PYTHONPATH=$HOME/Dev/dataproc:$PYTHONPATH
+# export PYTHONPATH=$HOME/Dev/util:$PYTHONPATH
+export PYTHONPATH=$HOME/Dev/haohua:$PYTHONPATH
+export PYTHONPATH=$HOME/Dev/python-all:$PYTHONPATH
+# export PYTHONPATH=$HOME/Workspace/Proj/common-utils:$PYTHONPATH
+export PYTHONPATH=$HOME/Workspace/Proj/xyz_utils:$PYTHONPATH
+# export PYTHONPATH=$HOME/Dev/DataAugmentationForObjectDetection:$PYTHONPATH
+export CHEAT_COLORS=true
+alias trdn="tr -d '\n'"
+alias cpxclip='xclip -selection -c'
+alias scpxclip='trdn | cpxclip'
+# export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+#export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4:/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4:/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4:/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/usr/lib/x86_64-linux-gnu/libfreetype.so.6
+alias nautilus='nautilus --no-desktop'
+
+#unset http_proxy
+#unset https_proxy
+alias dirnums='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
+alias todo='~/.todo.sh'
+# export http_proxy="127.0.0.1:8123"
+# export https_proxy="127.0.0.1:8123"
+alias xmllint='xmllint --format'
+alias volcano='ssh -Y zhouxiangyong@volcano'
+# alias go107='ssh -Y zhouxiangyong@s107 -p 6000'
+# alias go108='ssh -Y zhouxiangyong@s108 -p 10822'
+alias go108='autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -Y zhouxiangyong@s108 -p 10822'
+export pycharm_script=$HOME/PycharmProjects/scripts/scripts1
+export pytools=$HOME/Dev/python-all/pytools
+export pypacks=$HOME/Dev/python-all/pypacks
+export pypaper=$HOME/Dev/python-all/pypaper
+export pytemp=$HOME/Dev/python-all/pytemp
+alias logdir='cd /home/xiang/Documents/MED/zhouxiangyong'
+alias htopu='htop -u xiang'
+alias listdir=/home/xiang/.Env/ubuntu-settings/Commands/listdir.sh
+alias curlh='curl -x 127.0.0.1:8123'
+alias curls='curl --socks5-hostname 127.0.0.1:1080'
+alias scp108='scp -P 10822'
+alias goVM='ssh xiang@192.168.147.128 -X'
+alias sctl='systemctl'
+alias jctl='journalctl'
+alias cdw='cd /home/xiang/Workspace'
+alias vpy='workon py37'
+alias i3cfg='cat $HOME/.i3/config'
+alias ws='cat $HOME/.i3/config | grep "^bind" | grep workspace'
+alias wss='cat $HOME/.i3/other_ws'
+alias wins='rofi -show window'
+alias xprop='xprop'
+
+
+### git shorcut ###
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -a -m'
+alias gcl='git clone'
+alias gp='git push'
+alias gr='git remote -v'
+alias gb='git branch -a'
+alias gl='git log'
+alias gd='git diff'
+
+alias sysdenable='sudo systemctl enable'
+alias sysdstart='sudo systemctl start'
+alias sysdstop='sudo systemctl stop'
+alias sysdrestart='sudo systemctl restart'
+alias sysdstatus='sudo systemctl status'
+alias sysdreload='sudo systemctl daemon-reload'
+
+# alias vpn='expressvpn'
+# alias vpnon='expressvpn connect'
+# alias vpnoff='expressvpn disconnect'
+source /home/xiang/.bashrc.functions
+
+
+# added by Anaconda3 5.3.1 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$(CONDA_REPORT_ERRORS=false '/home/xiang/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     \eval "$__conda_setup"
+# else
+#     if [ -f "/home/xiang/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/xiang/anaconda3/etc/profile.d/conda.sh"
+#         CONDA_CHANGEPS1=false conda activate base
+#     else
+#         \export PATH="/home/xiang/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda init <<<
+
+# alias py27='source activate py27'
+# alias py36='source activate py36'
+# alias deact='source deactivate'
+
+eval "$(fasd --init auto)"
+fasd_cache="$HOME/.fasd-init-bash"
+if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+  fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
+fi
+source "$fasd_cache"
+unset fasd_cache
+
+# eval "$(thefuck --alias)"
