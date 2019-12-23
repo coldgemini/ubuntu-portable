@@ -26,6 +26,8 @@ git commit -m "add README"
 git push -u origin master
 
 git tag -a <rtag> <SHA1 value> -m "message".
+git tag -a <tagname> -m '<message>'
+git tag -n9
 
 git submodule add url path
 
@@ -37,6 +39,9 @@ git push -u origin master
 git checkout -b branchxyz origin/branchxyz 
 git branch --set-upstream-to=origin/<branch> dev
 git pull
-git pull origin master
+git pull -u origin master
 
 git remote set-url origin git@gitserver.com:user/repo_name.git
+
+git push -u origin --all
+git push -u origin --tags
