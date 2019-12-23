@@ -1,0 +1,10 @@
+set hls
+set surround
+set easymotion
+set ignorecase
+set cursorcolumn
+set incsearch
+set ideamarks
+" inoremap qq <ESC>
+nnoremap <CR> o<ESC>
+nnoremap <leader><space> :nohl<cr>
