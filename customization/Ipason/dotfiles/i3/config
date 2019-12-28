@@ -304,6 +304,7 @@ for_window [instance="*Tut*"] floating enable
 for_window [title="^TkFloat$"] floating enable
 for_window [class="LearnOpenGL"] floating enable
 for_window [class="OpenGL"] floating enable
+for_window [class="electron-app"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
