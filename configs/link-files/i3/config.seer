@@ -212,6 +212,8 @@ bindsym $mod+Ctrl+v workspace 13:
 bindsym $mod+Ctrl+g workspace 14:
 #baidu
 bindsym $mod+Ctrl+b workspace 15:
+#qq
+bindsym $mod+Ctrl+q workspace 16:
 
 #windows
 bindsym $mod+Shift+Ctrl+v workspace 19:

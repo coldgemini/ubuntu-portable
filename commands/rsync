@@ -9,3 +9,5 @@ rsync -avuhP -e "ssh -p 10822" * zhouxiangyong@s108:~/Proj/coronary
 shopt -s dotglob
 rsync -avn --progress sourcefolder /destinationfolder --exclude thefoldertoexclude --exclude anotherfoldertoexclude 
 rsync -av --progress sourcefolder /destinationfolder --exclude thefoldertoexclude --exclude anotherfoldertoexclude
+
+rsync -e"ssh -c arcfour -o Compression=no" ... rest

@@ -101,6 +101,7 @@ alias sysdrestart='sudo systemctl restart'
 alias sysdstatus='sudo systemctl status'
 alias sysdreload='sudo systemctl daemon-reload'
 
+alias clashupdate='wget https://dler.cloud/subscribe/i8nCIPjncGG9lvTr?clash=ss -O /home/xiang/clash/config.yaml'
 # alias vpn='expressvpn'
 # alias vpnon='expressvpn connect'
 # alias vpnoff='expressvpn disconnect'
