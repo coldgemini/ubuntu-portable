@@ -177,14 +177,16 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 # bindsym $mod+Home workspace 0:Home
+#system
+bindsym $mod+End workspace 0:
 #home
-bindsym $mod+Home workspace 0:
+bindsym $mod+Home workspace 1:
 #folder
-bindsym $mod+Ctrl+f workspace 1:
+bindsym $mod+Ctrl+f workspace 2:
 #web
-bindsym $mod+Ctrl+w workspace 2:
+bindsym $mod+Ctrl+w workspace 3:
 #web2
-bindsym $mod+Shift+Ctrl+w workspace 3:
+# bindsym $mod+Shift+Ctrl+w workspace 4:
 #wechat
 bindsym $mod+Ctrl+x workspace 4:
 
@@ -214,6 +216,8 @@ bindsym $mod+Ctrl+g workspace 14:
 bindsym $mod+Ctrl+b workspace 15:
 #qq
 bindsym $mod+Ctrl+q workspace 16:
+#Motrix
+bindsym $mod+Ctrl+m workspace 17:
 
 #windows
 bindsym $mod+Shift+Ctrl+v workspace 19:
