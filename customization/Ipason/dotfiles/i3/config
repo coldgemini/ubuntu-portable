@@ -304,6 +304,7 @@ for_window [instance="*Tut*"] floating enable
 for_window [title="^TkFloat$"] floating enable
 for_window [class="LearnOpenGL"] floating enable
 for_window [class="OpenGL"] floating enable
+for_window [class="electron-app"] floating enable
 
 # Open applications on specific workspaces
 #assign [class="URxvt"] $ws1
@@ -355,7 +356,7 @@ bindsym $mod+m bar mode toggle
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bar {
  	status_command i3status
- 		tray_output primary
+ 		# tray_output primary
  		font xft:Noto Sans 12
  		strip_workspace_numbers yes
 
@@ -380,6 +381,7 @@ bar {
 #user setting
 exec_always --no-startup-id nm-applet --sm-disable
 exec --no-startup-id volumeicon
+exec --no-startup-id fcitx
 # exec_always --no-startup-id blueman-applet
 #exec --no-startup-id mpd
 #exec_always --no-startup-id classicmenu-indicator

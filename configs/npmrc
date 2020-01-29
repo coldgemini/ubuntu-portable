@@ -2,9 +2,11 @@ strict-ssl=false
 registry=https://registry.npm.taobao.org/
 prefix = ${HOME}/.npm-packages
 cache = ${HOME}/.npm-cache
+loglevel=warn
+init.author.name=coldgemini
+init.author.email=coldgemini@foxmail.com
+init.author.url=http://hiro.snowcrash.io
+init.license=MIT
+init.version=0.0.1
 
-init.author.name = "coldgemini"
-init.author.email = "coldgemini@foxmail.com"
-init.author.url = "http://hiro.snowcrash.io"
-init.license = "MIT"
-init.version = "0.0.1"
+electron_mirror="https://npm.taobao.org/mirrors/electron/"

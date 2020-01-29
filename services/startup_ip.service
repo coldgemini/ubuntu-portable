@@ -1,0 +1,12 @@
+[Unit]
+Description=startup_ip
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/xiang/Services/startup_send_ip.sh
+TimeoutSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

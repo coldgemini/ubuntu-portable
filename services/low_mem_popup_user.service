@@ -8,15 +8,24 @@
 # This unit gets pulled automatically into multi-user.target by
 # systemd-rc-local-generator if /etc/rc.local is executable.
 [Unit]
-Description=low_mem_popup
+Description=low_mem_popup_user
 #ConditionFileIsExecutable=/usr/local/bin/ssr
 After=network.target
+# BindsTo=graphical-session.target
+# PartOf=graphical-session.target
+# Requires=x_server_started.service
+# After=x_server_started.service
 
 [Service]
-#Type=simple
+#User=xiang
+#User=%I
+#Group=xiang
 Type=simple
+#Environment=DISPLAY=:0
+WorkingDirectory=/home/xiang
 #ExecStart=/usr/local/bin/ssr start
 ExecStart=/home/xiang/ubuntu-portable/services/ubuntu-low-mem-popup.sh
+#ExecStart=/usr/bin/python /home/xiang/ubuntu-portable/services/notify.py
 Restart=always
 TimeoutSec=0
 RemainAfterExit=no

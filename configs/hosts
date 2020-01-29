@@ -1,0 +1,23 @@
+127.0.0.1	localhost
+127.0.1.1	xiangNUC
+127.0.1.1	mydjango.com
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+192.168.2.108 volcano
+120.27.149.24	gitlab
+35.85.111.122	gcssr
+34.85.46.116	gcssr2
+35.194.103.96	seer
+35.220.155.102	wgbig
+
+139.196.105.107 s107
+47.103.101.41 s108
+
+# 0.0.0.0 account.jetbrains.com
+# 0.0.0.0 www.jetbrains.com

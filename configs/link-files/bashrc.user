@@ -1,14 +1,23 @@
+# set -o vi
+# alias grep='grep --color=auto'
+alias cgrep='grep --color=always'
 alias rc='. $HOME/.bashrc.user'
 alias vrc='vim $HOME/.bashrc.user'
 export EDITOR=vim
 alias sudo='sudo '
-alias ll='ls -alr --color=auto'
-alias la='ls -ar --color=auto'
-alias ls='ls -tr --color=auto'
-# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+#alias ll='ls -alr --color=auto'
+#alias la='ls -ar --color=auto'
+#alias ls='ls -tr --color=auto'
+export CUDA_HOME=/usr/local/cuda
+
+#### warning !!! ####
+# LD_LIBRARY_PATH should not end in colon: !!!
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 # export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
-# export PATH=/usr/local/cuda/bin:$PATH
+export PATH=/usr/local/cuda/bin:$PATH
 export PATH=$HOME/Apps/protoc/bin:$PATH
+export PATH=$HOME/.npm-packages/bin:$PATH
+export NODE_PATH=$(npm root --quiet -g)
 
 export WORKON_HOME=$HOME/Envs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
@@ -54,7 +63,7 @@ export pytools=$HOME/Dev/python-all/pytools
 export pypacks=$HOME/Dev/python-all/pypacks
 export pypaper=$HOME/Dev/python-all/pypaper
 export pytemp=$HOME/Dev/python-all/pytemp
-alias logdir='cd /home/xiang/Documents/MED/zhouxiangyong'
+alias logdir='cd /home/xiang/Documents/zhouxiangyong'
 alias htopu='htop -u xiang'
 alias listdir=/home/xiang/.Env/ubuntu-settings/Commands/listdir.sh
 alias curlh='curl -x 127.0.0.1:8123'
@@ -64,7 +73,7 @@ alias goVM='ssh xiang@192.168.147.128 -X'
 alias sctl='systemctl'
 alias jctl='journalctl'
 alias cdw='cd /home/xiang/Workspace'
-alias vpy='workon py37'
+alias vpy='workon py37tf2'
 alias i3cfg='cat $HOME/.i3/config'
 alias ws='cat $HOME/.i3/config | grep "^bind" | grep workspace'
 alias wss='cat $HOME/.i3/other_ws'
@@ -77,11 +86,16 @@ alias gs='git status'
 alias ga='git add'
 alias gcm='git commit -a -m'
 alias gcl='git clone'
-alias gp='git push'
+alias gps='git push'
+alias gpst='git push --tags'
+alias gpl='git pull'
+alias gplt='git pull --tags'
 alias gr='git remote -v'
 alias gb='git branch -a'
 alias gl='git log'
 alias gd='git diff'
+alias gt='git tag'
+alias gtn='git tag -n'
 
 alias sysdenable='sudo systemctl enable'
 alias sysdstart='sudo systemctl start'
@@ -90,6 +104,7 @@ alias sysdrestart='sudo systemctl restart'
 alias sysdstatus='sudo systemctl status'
 alias sysdreload='sudo systemctl daemon-reload'
 
+alias clashupdate='wget https://dler.cloud/subscribe/i8nCIPjncGG9lvTr?clash=ss -O /home/xiang/clash/config.yaml'
 # alias vpn='expressvpn'
 # alias vpnon='expressvpn connect'
 # alias vpnoff='expressvpn disconnect'

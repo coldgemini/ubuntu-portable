@@ -3,3 +3,5 @@ Enter ~.
 
 # port farwording tunnel
 ssh -nNT -L 9000:imgur.com:80 user@example.com
+
+sshfs -d -o sshfs_debug,loglevel=debug   -p 10822  zhouxiangyong@s108:/data2/home/zhouxiangyong/Proj Proj
