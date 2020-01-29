@@ -1,0 +1,3 @@
+npm update -g
+npm install npm@latest -g
+npm list -g --depth 0
