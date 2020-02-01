@@ -1,0 +1,26 @@
+dpkg -L packagename # list package content
+apt-cache pkgnames # list all available package
+apt-cache pkgnames vsftpd
+apt-cache search vsftpd # search also in descriptions
+apt-cache show netcat # package info
+apt-cache showpkg vsftpd # show dep
+apt-cache stats
+
+
+sudo apt-get install '*name*'
+sudo apt-get install packageName --only-upgrade
+sudo apt-get install vsftpd=2.3.5-3ubuntu1
+sudo apt-get remove vsftpd # don't remove configs
+sudo apt-get purge vsftpd # remove also configs
+sudo apt-get clean # clean deb files
+sudo apt-get autoclean #delete deb files
+sudo apt-get autoremove vsftpd # remove nolonger required deps
+
+sudo apt-get --download-only source vsftpd
+sudo apt-get source vsftpd # download and extract
+sudo apt-get --compile source goaccess # also compile
+sudo apt-get download nethogs # download binary
+
+sudo apt-get changelog vsftpd
+sudo apt-get check # check broken dependency
+
