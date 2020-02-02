@@ -1,3 +1,4 @@
+# systemctl enable systemd-networkd-wait-online.service
 [Unit]
 Description=startup_ip
 After=network.target

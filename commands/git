@@ -45,3 +45,5 @@ git remote set-url origin git@gitserver.com:user/repo_name.git
 
 git push -u origin --all
 git push -u origin --tags
+
+git config --global --unset core.gitproxy
