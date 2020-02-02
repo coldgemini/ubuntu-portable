@@ -1,7 +1,7 @@
 strict-ssl=false
-registry=http://registry.npm.taobao.org/
-prefix=/home/xiang/.npm-packages
-cache=/home/xiang/.npm-cache
+registry=https://registry.npm.taobao.org/
+prefix = ${HOME}/.npm-packages
+cache = ${HOME}/.npm-cache
 loglevel=warn
 init.author.name=coldgemini
 init.author.email=coldgemini@foxmail.com

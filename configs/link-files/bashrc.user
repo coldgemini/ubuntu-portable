@@ -5,11 +5,14 @@ alias rc='. $HOME/.bashrc.user'
 alias vrc='vim $HOME/.bashrc.user'
 export EDITOR=vim
 alias sudo='sudo '
-alias ll='ls -alr --color=auto'
-alias la='ls -ar --color=auto'
-alias ls='ls -tr --color=auto'
+#alias ll='ls -alr --color=auto'
+#alias la='ls -ar --color=auto'
+#alias ls='ls -tr --color=auto'
 export CUDA_HOME=/usr/local/cuda
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+#### warning !!! ####
+# LD_LIBRARY_PATH should not end in colon: !!!
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 # export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda/bin:$PATH
 export PATH=$HOME/Apps/protoc/bin:$PATH
@@ -60,7 +63,7 @@ export pytools=$HOME/Dev/python-all/pytools
 export pypacks=$HOME/Dev/python-all/pypacks
 export pypaper=$HOME/Dev/python-all/pypaper
 export pytemp=$HOME/Dev/python-all/pytemp
-alias logdir='cd /home/xiang/Documents/MED/zhouxiangyong'
+alias logdir='cd /home/xiang/Documents/zhouxiangyong'
 alias htopu='htop -u xiang'
 alias listdir=/home/xiang/.Env/ubuntu-settings/Commands/listdir.sh
 alias curlh='curl -x 127.0.0.1:8123'
@@ -101,6 +104,7 @@ alias sysdrestart='sudo systemctl restart'
 alias sysdstatus='sudo systemctl status'
 alias sysdreload='sudo systemctl daemon-reload'
 
+alias clashupdate='wget https://dler.cloud/subscribe/i8nCIPjncGG9lvTr?clash=ss -O /home/xiang/clash/config.yaml'
 # alias vpn='expressvpn'
 # alias vpnon='expressvpn connect'
 # alias vpnoff='expressvpn disconnect'
