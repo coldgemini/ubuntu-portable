@@ -1,0 +1,13 @@
+在 /usr/bin/wps （word）、/usr/bin/wpp （powerpoint）、/usr/bin/et （excel）脚本的开始，加入 export XMODIFIERS="@im=fcitx" 和 export QT_IM_MODULE="fcitx"。
+以 wps 为例：
+
+$ sudo vi /usr/bin/wps
+#!/bin/bash
+
+export XMODIFIERS="@im=fcitx"
+export QT_IM_MODULE="fcitx"
+
+gOpt=
+#gOptExt=-multiply
+gTemplateExt=("wpt" "dot" "dotx")
+
